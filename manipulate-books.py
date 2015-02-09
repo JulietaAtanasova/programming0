@@ -18,6 +18,7 @@ def calculate_discount_price(books):
 def find_max_books_to_buy(books, money):
   books_to_buy = []
   price = 0
+  books = sorted(books, key=lambda book: book.price)
   for book in books:
     price += book.price
     if price <= money:
